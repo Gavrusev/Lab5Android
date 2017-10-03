@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Lab5Android</string>
+    <string name="Gender">Пол</string>
+    <string name="Gender_Female">Женский</string>
+    <string name="Gender_Male">Мужской</string>
+    <string name="Weight">Вес</string>
+    <string name="Height">Рост</string>
+    <string name="Years">Возраст</string>
+    <string name="Sedentary">Малоподвижный образ жизни</string>
+    <string name="Level_Active">Уровень активности</string>
+    <string name="Standart">Обычная нагрузка</string>
+    <string name="Intensive">Интенсивная нагрузка</string>
+    <string name="Result">Результаты:</string>
+    <string name="kg">кг</string>
+    <string name="sm">см</string>
+    <string name="age">лет</string>
+</resources>

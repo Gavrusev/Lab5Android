@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorBackground"
+        tools:context="by.bstu.fit.oleggutsev.lab5android.MainActivity"
+        android:orientation="vertical">
+
+    <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <TableRow android:layout_width="match_parent"
+                  android:layout_height="match_parent"
+                  android:weightSum="10">
+            <TextView
+                    style="@style/textView_style"
+                    android:id="@+id/Gender_textView"
+                    android:layout_weight="3"
+                    android:text="@string/Gender"/>
+            <RadioGroup android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                <RadioButton
+                        android:text="@string/Gender_Female"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="15sp"
+                        android:id="@+id/GenderFamale_radioButton"/>
+                <RadioButton
+                        android:text="@string/Gender_Male"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/GenderMale_radioButton"/>
+            </RadioGroup>
+        </TableRow>
+        <TableRow android:layout_width="match_parent"
+                  android:layout_height="match_parent"
+                  android:weightSum="7">
+            <TextView
+                    android:text="@string/Weight"
+                    style="@style/textView_style"
+                    android:id="@+id/Weight_textView"
+                    android:layout_weight="2"/>
+            <EditText
+                    style="@style/editText_style"
+                    android:id="@+id/Weight_editText"
+                    android:layout_weight="8"
+                    tools:text="123"/>
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/kg"/>
+        </TableRow>
+        <TableRow android:layout_width="match_parent"
+                  android:layout_height="match_parent"
+                  android:weightSum="7">
+            <TextView
+                    style="@style/textView_style"
+                    android:id="@+id/Height_textView"
+                    android:text="@string/Height"
+                    android:layout_weight="2"/>
+            <EditText
+                    android:id="@+id/Height_editText"
+                    style="@style/editText_style"
+                    android:layout_weight="8"
+                    tools:text="23"/>
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/sm"/>
+        </TableRow>
+        <TableRow android:layout_width="match_parent"
+                  android:layout_height="match_parent"
+                  android:weightSum="7">
+            <TextView
+                    style="@style/textView_style"
+                    android:id="@+id/Years_textView"
+                    android:text="@string/Years"
+                    android:layout_weight="2"
+                    android:layout_marginBottom="50dp"/>
+            <EditText
+                    style="@style/editText_style"
+                    android:id="@+id/Years_editText"
+                    android:layout_weight="8"
+                    tools:text="181"/>
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/age"/>
+        </TableRow>
+        <TableRow android:layout_width="match_parent"
+                  android:layout_height="match_parent"
+                  android:layout_weight="9">
+            <TextView
+                    style="@style/textView_style"
+                    android:visibility="invisible"
+                    android:layout_weight="12"
+                    android:id="@+id/textView"/>
+            <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="8"
+                    android:onClick="event_onClick"
+                    android:layout_marginBottom="6dp"
+                    android:background="@color/colorSedentary"
+                    android:layout_marginRight="20dp"
+                    android:id="@+id/Sedentary_button"
+                    android:text="@string/Sedentary"/>
+        </TableRow>
+        <TableRow android:layout_width="match_parent"
+                  android:layout_height="match_parent"
+                  android:weightSum="10">
+            <TextView
+                    android:text="@string/Level_Active"
+                    style="@style/textView_style"
+                    android:layout_weight="6"
+                    android:minLines="2"
+                    android:paddingBottom="5dp"
+                    android:id="@+id/LevelActive_textView"/>
+            <Button
+                    android:text="@string/Standart"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorStandart"
+                    android:onClick="event_onClick"
+                    android:layout_marginRight="20dp"
+                    android:layout_weight="4"
+                    android:id="@+id/LevelActive_button"/>
+        </TableRow>
+        <TableRow android:layout_width="match_parent"
+                  android:layout_height="match_parent"
+                  android:weightSum="10">
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="6"
+                    android:id="@+id/textView4"/>
+            <Button
+                    android:text="@string/Intensive"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorIntensive"
+                    android:layout_marginRight="20dp"
+                    android:onClick="event_onClick"
+                    android:layout_weight="4"
+                    android:id="@+id/Intensive_button"/>
+        </TableRow>
+    </TableLayout>
+
+    <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:layout_margin="20dp"
+            android:padding="5dp"
+            android:textSize="25sp"
+            android:textAllCaps="true"
+            android:id="@+id/Result_textView"
+            android:text="@string/Result"/>
+    <LinearLayout android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:orientation="horizontal"
+                  android:layout_gravity="center" >
+
+        <TextView
+                android:paddingTop="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:id="@+id/FinalResult_textView"
+                tools:text="1234567"/>
+        <TextView
+                android:id="@+id/Value_TextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:layout_marginLeft="10dp"
+                android:text = "ккал/день"
+                android:visibility="invisible"/>
+    </LinearLayout>
+</LinearLayout>
